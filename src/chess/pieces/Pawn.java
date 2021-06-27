@@ -21,50 +21,51 @@ public class Pawn extends ChessPiece {
 
 
         //WHITE
-        //1 Casa a frente
+            //1 MOVE FORWARD
         if (getColor() == Color.WHITE) {
-            p.setValues(position.getRow() - 1, position.getCollum());
+            p.setValues(position.getRow() - 1, position.getColumn());
             if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
-                mat[p.getRow()][p.getCollum()] = true;
+                mat[p.getRow()][p.getColumn()] = true;
             }
-            //2 Casas a frente
-            p.setValues(position.getRow() - 2, position.getCollum());
-            Position p2 = new Position(position.getRow() - 1, position.getCollum());
+            //2 MOVES FORWARD
+            p.setValues(position.getRow() - 2, position.getColumn());
+            Position p2 = new Position(position.getRow() - 1, position.getColumn());
             if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p) && getBoard().positionExists(p2) && !getBoard().thereIsAPiece(p2) && getMoveCount() == 0) {
-                mat[p.getRow()][p.getCollum()] = true;
+                mat[p.getRow()][p.getColumn()] = true;
             }
-            //Diagonal esquerda superior (captura)
-            p.setValues(position.getRow() - 1, position.getCollum() - 1);
+            //NW
+            p.setValues(position.getRow() - 1, position.getColumn() - 1);
             if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
-                mat[p.getRow()][p.getCollum()] = true;
+                mat[p.getRow()][p.getColumn()] = true;
             }
-            //Diagonal direita superior (captura)
-            p.setValues(position.getRow() - 1, position.getCollum() + 1);
+            //NE
+            p.setValues(position.getRow() - 1, position.getColumn() + 1);
             if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
-                mat[p.getRow()][p.getCollum()] = true;
+                mat[p.getRow()][p.getColumn()] = true;
             }
         }
         // BLACK
         else {
-            p.setValues(position.getRow() + 1, position.getCollum());
+            //1 MOVE FORWARD
+            p.setValues(position.getRow() + 1, position.getColumn());
             if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
-                mat[p.getRow()][p.getCollum()] = true;
+                mat[p.getRow()][p.getColumn()] = true;
             }
-            //2 Casas a frente
-            p.setValues(position.getRow() + 2, position.getCollum());
-            Position p2 = new Position(position.getRow() + 1, position.getCollum());
+            //2 MOVES FORWARD
+            p.setValues(position.getRow() + 2, position.getColumn());
+            Position p2 = new Position(position.getRow() + 1, position.getColumn());
             if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p) && getBoard().positionExists(p2) && !getBoard().thereIsAPiece(p2) && getMoveCount() == 0) {
-                mat[p.getRow()][p.getCollum()] = true;
+                mat[p.getRow()][p.getColumn()] = true;
             }
-            //Diagonal esquerda superior (captura)
-            p.setValues(position.getRow() + 1, position.getCollum() - 1);
+            //SW
+            p.setValues(position.getRow() + 1, position.getColumn() - 1);
             if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
-                mat[p.getRow()][p.getCollum()] = true;
+                mat[p.getRow()][p.getColumn()] = true;
             }
-            //Diagonal direita superior (captura)
-            p.setValues(position.getRow() + 1, position.getCollum() + 1);
+            //SE
+            p.setValues(position.getRow() + 1, position.getColumn() + 1);
             if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
-                mat[p.getRow()][p.getCollum()] = true;
+                mat[p.getRow()][p.getColumn()] = true;
             }
         }
         return mat;
