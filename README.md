@@ -8,7 +8,7 @@ This application consist in a classical Chess Game with all rules implemented in
 
 # How to run
 
-##Requirements:##
+## Requirements: ##
 Java 15 or higher
 Terminal or IntelliJ IDEA
 
