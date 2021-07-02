@@ -13,3 +13,10 @@ Java 15 or higher
 Terminal or IntelliJ IDEA
 
 Download and open in terminal, or run the Main class in IntelliJ IDEA.
+
+ ### Game Start
+![start](https://github.com/reisalazar/project-chess-java/blob/main/start.PNG)
+ ### Move a Piece
+![makeAMove](https://github.com/reisalazar/project-chess-java/blob/main/move.PNG)
+ ### Move Completed
+![moveCompleted](https://github.com/reisalazar/project-chess-java/blob/main/movecompleted.PNG)
